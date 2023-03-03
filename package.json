@@ -1,0 +1,19 @@
+{
+  "name": "fem-fylo-dark-theme-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobStk/fem-fylo-dark-theme-landing-page.git"
+  },
+  "author": "robster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobStk/fem-fylo-dark-theme-landing-page/issues"
+  },
+  "homepage": "https://github.com/RobStk/fem-fylo-dark-theme-landing-page#readme"
+}
