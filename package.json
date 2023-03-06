@@ -19,6 +19,9 @@
   "homepage": "https://github.com/RobStk/fem-fylo-dark-theme-landing-page#readme",
   "devDependencies": {
     "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
     "jest": "^29.5.0",
     "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",
