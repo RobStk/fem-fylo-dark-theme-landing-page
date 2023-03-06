@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack --mode development --watch"
   },
   "repository": {
@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/RobStk/fem-fylo-dark-theme-landing-page#readme",
   "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
     "webpack-cli": "^5.0.1"
