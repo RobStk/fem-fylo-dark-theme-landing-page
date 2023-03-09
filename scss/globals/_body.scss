@@ -1,0 +1,8 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+body {
+	font: fonts.$main;
+	background-color: colors.$bg-main-dark-blue;
+	color: colors.$white-grey;
+}

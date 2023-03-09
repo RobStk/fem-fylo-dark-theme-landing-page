@@ -1,0 +1,1 @@
+{"version":3,"sources":["../scss/configs/_fonts.scss","../scss/globals/_base.scss","main.css","../scss/globals/_body.scss","../scss/configs/_colors.scss"],"names":[],"mappings":"AAAQ,uHAAA;ACAR;EACC,sBAAA;EACA,mBAAA;ACED;ADAI;;;EAGI,mBAAA;ACER;ADCI;EACI,SAAA;EACA,UAAA;ACCR;ADCQ;EACI,aAAA;ACCZ;;ACbA;EACC,mCHQM;EGPN,oCCHmB;EDInB,sBCOY;AFSb","file":"main.css"}
