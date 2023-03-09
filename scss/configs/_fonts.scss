@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+$families: (
+	main: #{"Open Sans", sans-serif},
+	secondary: #{'Raleway', sans-serif},
+);
+
+$weights: (
+	regular: 400,
+	bold: 700,
+);
+
+$main: map-get($weights, regular) 1em map-get($families, main);
+$secondary: map-get($weights, regular) 1em map-get($families, secondary);
