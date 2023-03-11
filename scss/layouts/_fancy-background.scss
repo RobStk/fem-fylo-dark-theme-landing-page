@@ -1,0 +1,22 @@
+@use "../configs/colors";
+
+.fancy-background {
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 56vh 1fr;
+
+	&__bg-1 {
+		background-color: colors.$bg-secondary-dark-blue;
+		background-image: url("../../images/bg-curvy-mobile.svg");
+		background-position: bottom;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__bg-2 {
+		background-color: colors.$bg-main-dark-blue;
+	}
+}
