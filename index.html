@@ -11,40 +11,37 @@
   <link rel="stylesheet" href="css/main.css">
 
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
   <script src="dist/app.js" type="module"></script>
 </head>
 
 <body>
-  <div class="main wrapper">
+  <div class="main-wrapper">
+
+    <div class="fancy-background">
+      <div class="fancy-background__bg-1"></div>
+      <div class="fancy-background__bg-2"></div>
+    </div>
+
     <div class="fylo-landing">
 
-      <header class="main-header">
-        <a href="#" class="logo"></a>
-        <nav class="main-nav">
+      <header class="fylo-landing__header">
+        <a href="#" class="logo">
+          <img src="images/logo.svg" alt="fylo-logo">
+        </a>
+        <nav class="fylo-landing__nav">
           <div>Features</div>
           <div>Team</div>
           <div>Sign In</div>
         </nav>
       </header>
 
-      <main>
+      <main class="fylo-landing__main">
 
-        <article class="front">
+        <article class="fylo-landing__intro">
           <img src="images/illustration-intro.png" alt="illustration-intro"></img>
           <h2>All your files in one secure location, accessible anywhere.</h2>
-          <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and
+          <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share
+            and
             collaborate with friends family, and co-workers.</p>
           <button>Get Started</button>
         </article>
@@ -102,7 +99,7 @@
               <div class="desc">Founder & CEO, Huddle</div>
             </div>
           </div>
-          
+
           <div class="quote-tile">
             <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
               become a well-oiled collaboration machine.</p>
@@ -135,8 +132,9 @@
         </div>
 
       </main>
-      <footer class="main-footer">
-        
+
+      <footer class="fylo-landing__footer">
+
         <a href="#" class="logo"></a>
 
         <div class="footer-section contact">
@@ -179,6 +177,7 @@
         </div>
 
       </footer>
+
     </div>
     <footer>
       <p class="attribution">
@@ -186,7 +185,9 @@
         Coded by <a href="#">robster</a>.
       </p>
     </footer>
+
   </div>
+
 </body>
 
 </html>

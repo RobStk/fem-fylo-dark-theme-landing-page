@@ -3,6 +3,10 @@
 
 body {
 	font: fonts.$main;
-	background-color: colors.$bg-main-dark-blue;
 	color: colors.$white-grey;
+	width: 100%;
+
+	.main-wrapper {
+		position: relative;
+	}
 }
