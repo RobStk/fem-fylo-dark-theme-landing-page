@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.logo {
+  display: flex;
+  place-items: center;
+}
+
 html {
   box-sizing: border-box;
   font-size: 0.875rem;
@@ -18,6 +32,71 @@ html *.hidden {
 
 body {
   font: 400 1em Open Sans, sans-serif;
-  background-color: hsl(218, 28%, 13%);
   color: hsl(0, 0%, 75%);
+  width: 100%;
+}
+body .main-wrapper {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.fancy-background {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 56vh 1fr;
+}
+.fancy-background__bg-1 {
+  background-color: hsl(217, 28%, 15%);
+  background-image: url("../../images/bg-curvy-mobile.svg");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.fancy-background__bg-2 {
+  background-color: hsl(218, 28%, 13%);
+}
+
+.fylo-landing {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+  justify-content: center;
+  gap: 4rem;
+}
+.fylo-landing__header {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.fylo-landing__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 1.5em;
+  text-align: center;
+  font-size: 90%;
+}
+.fylo-landing__main {
+  padding: 1rem;
+}
+.fylo-landing__intro {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
