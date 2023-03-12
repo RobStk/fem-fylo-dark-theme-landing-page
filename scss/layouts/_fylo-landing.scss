@@ -31,6 +31,8 @@
 
 	&__main {
 		padding: 1rem;
+		display: grid;
+		row-gap: 8rem;
 	}
 
 	&__intro {
