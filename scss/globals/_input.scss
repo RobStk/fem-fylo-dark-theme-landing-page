@@ -1,0 +1,11 @@
+@use "../utils/shapes";
+
+input[type=text],
+input[type=submit],
+input[type=email] {
+	@include shapes.input-line;
+}
+
+input::placeholder{
+	opacity: .4;
+}
