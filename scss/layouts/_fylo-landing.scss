@@ -1,18 +1,21 @@
 @use "../configs/colors";
+@use "../configs/fonts";
+@use "../utils/shapes";
 
 .fylo-landing {
 	width: 100%;
+	max-width: 80rem;
 	height: 100%;
 	padding: 1.8rem;
 	display: grid;
 	grid-template-rows: auto auto auto;
 	grid-template-columns: 100%;
 	justify-content: center;
-	gap: 4rem;
+	gap: 2rem;
 
 	&__header {
 		display: grid;
-		grid-template-columns: 30% 1fr;
+		grid-template-columns: 6rem 1fr;
 		align-items: center;
 		justify-content: space-between;
 		gap: 2rem;
@@ -25,22 +28,73 @@
 		justify-content: right;
 		gap: 1.5em;
 		text-align: center;
+		font: fonts.$secondary;
 		font-size: 90%;
 		color: colors.$white-grey;
 	}
 
 	&__main {
-		padding: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		display: grid;
 		row-gap: 8rem;
 	}
 
-	&__intro {
+	&__article {
+		padding-left: 0.8rem;
+		padding-right: 0.8rem;
+		$article: &;
 		width: 100%;
 		display: grid;
 		grid-template-rows: auto;
-		gap: 2rem;
-		text-align: center;
+		justify-items: center;
+		gap: 1.5em;
+
+		img {
+			max-height: 50vh;
+			margin: 1rem;
+		}
+
+		&__btn {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			min-width: 16rem;
+		}
+
+		&--center {
+			@extend #{$article};
+			text-align: center;
+		}
+
+		&--left {
+			@extend #{$article};
+			justify-items: left;
+		}
+		
+		&--form {
+			@extend #{$article};
+			display: flex;
+			flex-direction: column;
+			gap: 1.4rem;
+			background-color: colors.$bg-secondary-dark-blue;
+			padding: 2.4em 1.5em 1.6em 1.5em;
+			border-radius: .8em;
+			text-align: center;
+
+			form {
+				margin-top: 0.6rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.8rem;
+				width: 100%;
+				max-width: 30rem
+			}
+			
+			input {
+				@include shapes.input-line;
+				width: 100%;
+			}
+		}
 	}
 
 	&__tiles {
