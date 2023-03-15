@@ -17,7 +17,7 @@
 
 <body>
   <div class="main-wrapper">
-
+    
     <div class="fylo-landing">
 
       <header class="fylo-landing__header">
@@ -33,13 +33,11 @@
 
       <main class="fylo-landing__main">
 
-        <article class="fylo-landing__intro">
+        <article class="fylo-landing__article--center">
           <img src="images/illustration-intro.png" alt="illustration-intro"></img>
-          <h2>All your files in one secure location, accessible anywhere.</h2>
-          <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share
-            and
-            collaborate with friends family, and co-workers.</p>
-          <button>Get Started</button>
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+          <div class="button-container fylo-landing__article__btn"><button>Get Started</button></div>
         </article>
 
         <div class="fylo-landing__tiles">
@@ -74,14 +72,14 @@
 
         </div>
 
-        <article class="teaser">
+        <article class="fylo-landing__article--left">
           <img src="images/illustration-stay-productive.png" alt="illustration-stay-productive">
           <h2>Stay productive, wherever you are</h2>
           <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file
             storage needs.</p>
           <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email
             attachments required.</p>
-          <a href="#">See how Fylo works</a>
+          <a href="#" class="cta-line">See how Fylo works <i class="demo-icon icon-right-circle"></i></a>
         </article>
 
         <div class="opinions">
@@ -117,13 +115,14 @@
           </div>
 
         </div>
-        <div class="form">
+
+        <div class="form fylo-landing__article--form">
           <h2>Get early access today</h2>
           <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
             questions, our support team would be happy to help you.</p>
           <form>
             <input type="text" placeholder="email@example.com">
-            <input type="submit" value="Get Started For Free">
+            <div class="button-container fylo-landing__article__btn"><input type="submit" value="Get Started For Free"></div>
           </form>
         </div>
 
@@ -175,6 +174,7 @@
       </footer>
 
     </div>
+
     <footer>
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
