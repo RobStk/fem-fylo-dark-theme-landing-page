@@ -37,6 +37,7 @@
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		display: grid;
+		justify-items: center;
 		row-gap: 8rem;
 	}
 
@@ -48,6 +49,7 @@
 		display: grid;
 		grid-template-rows: auto;
 		justify-items: center;
+		align-items: center;
 		gap: 1.5em;
 
 		img {
@@ -85,6 +87,7 @@
 				margin-top: 0.6rem;
 				display: flex;
 				flex-direction: column;
+				align-content: center;
 				gap: 0.8rem;
 				width: 100%;
 				max-width: 30rem
@@ -99,6 +102,9 @@
 
 	&__tiles {
 		display: grid;
-		row-gap: 5em;
+		width: 80%;
+		grid-template-columns: repeat(auto-fit, 20rem);
+		justify-content: center;
+		gap: 5em;
 	}
 }
