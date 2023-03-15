@@ -1,0 +1,12 @@
+@use "../configs/fonts";
+
+h1 {
+	font: fonts.$secondary;
+	font-size: 1.65em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+h2 {
+	font-size: 1.25em;
+}
