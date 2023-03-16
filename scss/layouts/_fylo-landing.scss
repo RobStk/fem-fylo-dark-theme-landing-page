@@ -111,4 +111,11 @@
 		justify-content: center;
 		gap: 5em;
 	}
+
+	&__testimonials {
+		display: flex;
+		flex-direction: column;
+		gap: 1.8rem;
+		padding: 2em;
+	}
 }
