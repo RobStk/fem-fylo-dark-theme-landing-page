@@ -1,6 +1,7 @@
 @use "../configs/colors";
 @use "../configs/fonts";
 @use "../utils/shapes";
+@use "sass:color";
 
 .fylo-landing {
 	width: 100%;
@@ -74,14 +75,17 @@
 		}
 		
 		&--form {
+			$bg-color: colors.$bg-secondary-dark-blue;
+			$shadow: 3px 3px 6px 2px color.adjust($bg-color, $lightness: -40%, $alpha: -0.8);
 			@extend #{$article};
 			display: flex;
 			flex-direction: column;
 			gap: 1.4rem;
-			background-color: colors.$bg-secondary-dark-blue;
+			background-color: $bg-color;
 			padding: 2.4em 1.5em 1.6em 1.5em;
 			border-radius: .8em;
 			text-align: center;
+			box-shadow: $shadow;
 
 			form {
 				margin-top: 0.6rem;
