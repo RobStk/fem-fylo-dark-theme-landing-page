@@ -1,0 +1,11 @@
+@use "../configs/colors";
+
+.social-link {
+	color: colors.$white-grey;
+	border: 1px solid;
+	border-radius: 9999px;
+	padding: .2em;
+	&:hover {
+		color: colors.$cyan;
+	}
+}

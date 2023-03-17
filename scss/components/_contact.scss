@@ -1,0 +1,12 @@
+.contact {
+	display: grid;
+	grid-template-columns: 3em 1fr;
+	align-items: center;
+
+	img {
+		align-self: flex-start;
+		padding: .5em 0;
+		width: fit-content;
+		height: fit-content;
+	}
+}
