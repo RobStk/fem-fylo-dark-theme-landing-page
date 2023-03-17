@@ -32,6 +32,9 @@
 		font: fonts.$secondary;
 		font-size: 90%;
 		color: colors.$white-grey;
+		a:hover {
+			color: colors.$white;
+		}
 	}
 
 	&__main {
