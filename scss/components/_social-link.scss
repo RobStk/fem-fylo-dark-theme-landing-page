@@ -5,6 +5,7 @@
 	border: 1px solid;
 	border-radius: 9999px;
 	padding: .2em;
+	transition: color .2s;
 	&:hover {
 		color: colors.$cyan;
 	}
