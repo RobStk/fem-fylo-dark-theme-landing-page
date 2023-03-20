@@ -1,0 +1,49 @@
+.footer {
+	width: 100%;
+	padding-top: 17rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	padding-bottom: 0.2em;
+	background-color: var(--color-bg-footer);
+	font-size: 1.1em;
+	color: var(--color-secondary);
+	display: grid;
+	justify-items: start;
+	row-gap: 2em;
+	grid-template-areas:
+		"logo"
+		"contacts"
+		"nav"
+		"social";
+
+	&__logo {
+		grid-area: logo;
+		padding: .5em;
+	}
+
+	&__contacts {
+		grid-area: contacts;
+		flex-direction: column;
+		display: flex;
+		row-gap: .6em;
+	}
+
+	&__nav {
+		grid-area: nav;
+		display: flex;
+		flex-direction: column;
+		row-gap: 3em;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		a:hover {
+			color: var(--color-main);
+		}
+	}
+
+	&__social {
+		justify-self: center;
+		display: flex;
+		gap: .75rem;
+	}
+}

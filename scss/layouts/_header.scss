@@ -1,0 +1,30 @@
+.header {
+	width: 100%;
+	padding-top: 1.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-bottom: .75rem;
+	margin-bottom: 2rem;
+	display: grid;
+	grid-template-columns: 6rem 1fr;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: right;
+		gap: 1.5em;
+		text-align: center;
+		font: var(--font-secondary);
+		font-size: .9em;
+		color: var(--color-secondary);
+
+		a:hover {
+			color: var(--color-main);
+		}
+	}
+}
+
