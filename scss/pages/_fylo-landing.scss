@@ -5,42 +5,14 @@
 
 .fylo-landing {
 	width: 100%;
-	max-width: 80rem;
 	height: 100%;
 	display: grid;
 	grid-template-rows: auto auto auto;
 	grid-template-columns: 100%;
-	justify-content: center;
-	gap: 2rem;
-
-	&__header {
-		padding-top: 1.5rem;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-		padding-bottom: .75rem;
-		display: grid;
-		grid-template-columns: 6rem 1fr;
-		align-items: center;
-		justify-content: space-between;
-		gap: 2rem;
-	}
-
-	&__nav {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: right;
-		gap: 1.5em;
-		text-align: center;
-		font: fonts.$secondary;
-		font-size: 90%;
-		color: colors.$white-grey;
-		a:hover {
-			color: colors.$white;
-		}
-	}
+	justify-items: center;
 
 	&__main {
+		max-width: 80rem;
 		padding-left: 1.8rem;
 		padding-right: 1.8rem;
 		display: grid;
@@ -92,6 +64,8 @@
 			border-radius: .8em;
 			text-align: center;
 			box-shadow: $shadow;
+			position: relative;
+			top: 50%;
 
 			form {
 				margin-top: 0.6rem;
@@ -123,52 +97,5 @@
 		flex-direction: column;
 		gap: 1.8rem;
 		padding: 2em;
-	}
-
-	&__footer {
-		padding-top: 2rem;
-		padding-right: 2rem;
-		padding-left: 2rem;
-		padding-bottom: 0.2em;
-		background-color: colors.$bg-footer-dark-blue;
-		color: colors.$white-grey;
-		display: grid;
-		justify-items: start;
-		row-gap: 3em;
-		grid-template-areas: 
-		"logo"
-		"contacts"
-		"nav"
-		"social";
-
-		&__logo {
-			grid-area: logo;
-			padding: .5em;
-		}
-
-		&__contacts {
-			grid-area: contacts;
-			flex-direction: column;
-			display: flex;
-			row-gap: 1em;
-		}
-
-		&__nav {
-			grid-area: nav;
-			display: flex;
-			flex-direction: column;
-			row-gap: 3em;
-			padding-top: 3em;
-			padding-bottom: 3em;
-			a:hover {
-				color: colors.$white;
-			}
-		}
-
-		&__social {
-			justify-self: center;
-			display: flex;
-			gap: .75rem;
-		}
 	}
 }

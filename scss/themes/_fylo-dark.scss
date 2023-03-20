@@ -1,10 +1,19 @@
 @use "../configs/colors";
+// @use "../configs/fonts";
 @use "../utils/screen";
 
-.main-wrapper {
+.fylo-dark {
+	--color-main: #{colors.$white};
+	--color-secondary: #{colors.$white-grey};
+	--color-bg-main: #{colors.$bg-main-dark-blue};
+	--color-bg-secondary: #{colors.$bg-secondary-dark-blue};
+	--color-bg-footer: #{colors.$bg-footer-dark-blue};
+
 	position: relative;
 	display: grid;
-	justify-content: center;
+	color: var(--color-main);
+	background-color: var(--color-bg-main);
+	z-index: 1;
 
 	&::after {
 		content: "";
@@ -15,7 +24,7 @@
 		left: 0;
 		z-index: -1;
 		height: 52vh;
-		background-color: colors.$bg-secondary-dark-blue;
+		background-color: var(--color-bg-secondary);
 		background-image: url("../../images/bg-curvy-mobile.svg");
 		background-position: bottom;
 		background-size: 100%;

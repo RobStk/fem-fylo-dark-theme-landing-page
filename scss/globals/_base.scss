@@ -1,3 +1,10 @@
+@use "../configs/fonts";
+
+:root {
+    --font-main: #{fonts.$main};
+    --font-secondary: #{fonts.$secondary};
+}
+
 html {
 	box-sizing: border-box;
 	font-size: 0.875rem;
