@@ -4,6 +4,8 @@
 
 .button-container {
 	@include shapes.input-line;
+	display: flex;
+	align-items: center;
 	position: relative;
 	background: linear-gradient(90deg, colors.$cyan, 25%, colors.$blue);
 	color: colors.$white;
