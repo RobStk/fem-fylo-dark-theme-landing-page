@@ -8,6 +8,8 @@
 	--color-bg-secondary: #{colors.$bg-secondary-dark-blue};
 	--color-bg-footer: #{colors.$bg-footer-dark-blue};
 
+	font: var(--font-main);
+
 	position: relative;
 	display: grid;
 	color: var(--color-main);
@@ -22,12 +24,15 @@
 		bottom: 0;
 		left: 0;
 		z-index: -1;
-		height: 52vh;
-		background-color: var(--color-bg-secondary);
-		background-image: url("../../images/bg-curvy-mobile.svg");
-		background-position: bottom;
-		background-size: 100%;
-		background-repeat: no-repeat;
+
+		@include screen.respond-to("medium") {
+			height: 52vh;
+			background-color: var(--color-bg-secondary);
+			background-image: url("../../images/bg-curvy-mobile.svg");
+			background-position: bottom;
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
 
 		@include screen.respond-to("large") {
 			height: 100vh;
