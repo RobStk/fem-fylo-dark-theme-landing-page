@@ -1,5 +1,6 @@
 @use "../configs/colors";
 @use "../configs/fonts";
+@use "../utils/grids";
 @use "../utils/shapes";
 @use "sass:color";
 
@@ -31,15 +32,11 @@
 	}
 
 	&__article {
+		$article: &;
 		padding-left: 0.8rem;
 		padding-right: 0.8rem;
-		$article: &;
-		width: 100%;
-		display: grid;
-		grid-template-rows: auto;
-		justify-items: center;
-		align-items: center;
-		gap: 1.5em;
+		@include grids.article-grid(&);
+		row-gap: 1.5em;		
 
 		img {
 			max-height: 50vh;
@@ -49,16 +46,27 @@
 		&__btn {
 			margin-top: 1em;
 			margin-bottom: 1em;
-			min-width: 16rem;
 		}
 
 		&--center {
 			@extend #{$article};
+			grid-template-areas: 
+			"image image image"
+			"header header header"
+			"content content content"
+			". btn ."
+			;
 			text-align: center;
 		}
 
 		&--left {
 			@extend #{$article};
+			grid-template-areas: 
+			"image"
+			"header"
+			"content"
+			"cta"
+			;
 			justify-items: left;
 		}
 		

@@ -1,0 +1,29 @@
+@use "../utils/screen";
+
+@mixin article-grid($root-class) {
+	$root: #{$root-class};
+	display: grid;
+
+	#{$root-class}__image {
+		grid-area: image;
+	}
+
+	&__header {
+		grid-area: header;
+	}
+
+	&__content {
+		grid-area: content;
+		display: flex;
+		flex-direction: column;
+		row-gap: inherit;
+	}
+
+	&__cta {
+		grid-area: cta;
+	}
+
+	&__btn {
+		grid-area: btn;
+	}
+}
