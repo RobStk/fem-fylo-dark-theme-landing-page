@@ -5,19 +5,33 @@
 @use "sass:color";
 
 .fylo-landing {
-	width: 100%;
 	height: 100%;
 	display: grid;
 	grid-template-rows: auto auto auto;
 	grid-template-columns: 100%;
 	justify-items: center;
 
+	&__header, &__main, &__footer > * {
+		max-width: 1440px;
+	}
+
 	&__main {
-		max-width: 80rem;
 		padding-left: 1.8rem;
 		padding-right: 1.8rem;
 		display: grid;
 		justify-items: center;
+		
+		&__content {
+			display: grid;
+			justify-items: center;
+			gap: 8rem;
+		}
+
+		&__form {
+			position: relative;
+			top: 50%;
+		}
+
 		> * {
 			margin-top: 4rem;
 			margin-bottom: 4rem;
@@ -82,8 +96,6 @@
 			border-radius: .8em;
 			text-align: center;
 			box-shadow: $shadow;
-			position: relative;
-			top: 50%;
 
 			form {
 				margin-top: 0.6rem;
@@ -105,7 +117,7 @@
 	&__tiles {
 		display: grid;
 		width: 80%;
-		grid-template-columns: repeat(auto-fit, 20rem);
+		grid-template-columns: repeat(auto-fit, 21rem);
 		justify-content: center;
 		gap: 5em;
 	}
@@ -113,7 +125,7 @@
 	&__testimonials {
 		display: flex;
 		flex-direction: column;
-		gap: 1.8rem;
+		gap: 1.8em;
 		padding-top: 1.4em;
 		padding-right: 2em;
 		padding-left: 2em;
