@@ -1,5 +1,6 @@
 @use "../configs/colors";
 @use "../utils/screen";
+@use "sass:color";
 
 .fylo-dark {
 	--color-main: #{colors.$white};
@@ -7,6 +8,9 @@
 	--color-bg-main: #{colors.$bg-main-dark-blue};
 	--color-bg-secondary: #{colors.$bg-secondary-dark-blue};
 	--color-bg-footer: #{colors.$bg-footer-dark-blue};
+	--testimonial-color-bg: #{colors.$bg-testimonials-dark-blue};
+	--testimonial-color-font: #{color.adjust(colors.$bg-testimonials-dark-blue, $lightness: 65%)};
+	--testimonial-color-shadow: color.adjust(colors.$bg-testimonials-dark-blue, $alpha: -0.8);
 
 	font: var(--font-main);
 
@@ -35,7 +39,7 @@
 		}
 
 		@include screen.respond-to("large") {
-			height: 100vh;
+			height: 155vh;
 			background-image: url("../../images/bg-curvy-desktop.svg");
 		}
 	}
