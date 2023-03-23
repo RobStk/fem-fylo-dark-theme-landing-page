@@ -1,3 +1,5 @@
+@use "../utils/screen";
+
 .footer {
 	width: 100%;
 	padding-top: 17rem;
@@ -9,12 +11,14 @@
 	color: var(--color-secondary);
 	display: grid;
 	justify-items: start;
-	row-gap: 2em;
+	align-items: start;
+	gap: 2em;
 	grid-template-areas:
 		"logo"
 		"contacts"
 		"nav"
-		"social";
+		"social"
+		"attribution";
 
 	&__logo {
 		grid-area: logo;
@@ -23,16 +27,29 @@
 
 	&__contacts {
 		grid-area: contacts;
-		flex-direction: column;
-		display: flex;
+		display: grid;
+		align-items: start;
+		
 		row-gap: .6em;
+		&--pin {
+			grid-area: 
+			pin; 
+			align-items: start;
+			img {padding: .5em 0}
+		}
+		&--phone {grid-area: phone}
+		&--email {grid-area: email}
+		grid-template-areas:
+		"pin"
+		"phone"
+		"email";
 	}
 
 	&__nav {
 		grid-area: nav;
 		display: flex;
 		flex-direction: column;
-		row-gap: 3em;
+		gap: 3em;
 		padding-top: 3em;
 		padding-bottom: 3em;
 
@@ -42,8 +59,51 @@
 	}
 
 	&__social {
+		grid-area: social;
 		justify-self: center;
 		display: flex;
+		place-items: center;
 		gap: .75rem;
+	}
+
+	&__attribution {
+		grid-area: attribution;
+	}
+
+	@include screen.respond-to(large) {
+		padding-left: 8rem;
+		padding-right: 4rem;
+		grid-template-columns: minmax(min-content, 52%) max-content max-content;
+		column-gap: 8rem;
+		justify-content: space-between;
+		grid-template-rows: min-content;
+		grid-template-areas:
+			"logo logo logo"
+			"contacts nav social"
+			"attribution attribution attribution";
+
+		&__contacts {
+			height: min-content;
+			flex-wrap: wrap;
+			column-gap: 6rem;
+			grid-template-areas: 
+			"pin phone"
+			"pin email";
+		}
+
+		&__nav {
+			flex-direction: row;
+			column-gap: 6rem;
+			padding: 0;
+		}
+
+		&__social {
+			gap: 1rem;
+			font-size: 1.1em;
+		}
+
+		&__attribution {
+			padding-top: 4rem;
+		}
 	}
 }
