@@ -91,6 +91,7 @@
 				display: flex;
 				flex-direction: column;
 				align-content: center;
+				align-items: stretch;
 				gap: 0.8rem;
 				width: 100%;
 				max-width: 30rem
@@ -187,6 +188,28 @@
 			background-position-x: 1.8em;
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		&__article--form {
+			max-width: 875px;
+			padding: 3.5rem 6rem 2rem 6rem;
+			align-items: center;
+
+			h2 {
+				font-size: 2.2em;
+			}
+
+			p {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+			form {
+				max-width: unset;
+				flex-direction: row;
+				align-items: center;
+				column-gap: 2.4rem;
+			}
 		}
 	}
 }
