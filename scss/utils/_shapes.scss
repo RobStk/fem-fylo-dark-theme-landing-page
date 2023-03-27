@@ -1,6 +1,7 @@
-@mixin input-line {
+@mixin input-line() {
+	--padding: 0 1.3em;
 	border: none;
 	border-radius: 9999px;
 	min-height: 3.5rem;
-	padding: 0 1.3em;
+	padding: var(--padding);
 }

@@ -1,8 +1,10 @@
+@use "../configs/colors";
 @use "../configs/fonts";
 
 :root {
     --font-main: #{fonts.$main};
     --font-secondary: #{fonts.$secondary};
+    --color-error: #{colors.$lightRed};
 }
 
 html {
