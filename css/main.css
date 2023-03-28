@@ -207,14 +207,14 @@ html *.hidden {
 }
 
 h1 {
-  font: 400 1em Raleway, sans-serif;
+  font: var(--font-secondary);
   font-size: 1.7em;
   font-weight: 700;
   line-height: 1.5;
 }
 
 h2 {
-  font: 400 1em Raleway, sans-serif;
+  font: var(--font-secondary);
   font-size: 1.25em;
   font-weight: 700;
 }
