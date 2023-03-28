@@ -1,14 +1,14 @@
 @use "../configs/fonts";
 
 h1 {
-	font: fonts.$secondary;
+	font: var(--font-secondary);
 	font-size: 1.7em;
 	font-weight: 700;
 	line-height: 1.5;
 }
 
 h2 {
-	font: fonts.$secondary;
+	font: var(--font-secondary);
 	font-size: 1.25em;
 	font-weight: 700;
 }
