@@ -1,10 +1,10 @@
-import IEmailValidator from "./interfaces/IEmailValidator";
+import IValidator from "./interfaces/IValidator";
 import IInputValidator from "./interfaces/IInputValidator";
 
 class InputValidator implements IInputValidator {
-	private emailValidator: IEmailValidator;
+	private emailValidator: IValidator;
 
-	constructor(emailValidator: IEmailValidator) {
+	constructor(emailValidator: IValidator) {
 		this.emailValidator = emailValidator;
 	}
 

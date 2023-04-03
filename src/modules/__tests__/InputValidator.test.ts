@@ -3,11 +3,11 @@
  */
 
 import InputValidator from "../InputValidator";
-import IEmailValidator from "../interfaces/IEmailValidator";
+import IValidator from "../interfaces/IValidator";
 
 describe("validate", () => {
 	const input = document.createElement("input");
-	const fakeEmailValidator: IEmailValidator = {
+	const fakeEmailValidator: IValidator = {
 		validate: jest.fn()
 	};
 	console.log = jest.fn();
