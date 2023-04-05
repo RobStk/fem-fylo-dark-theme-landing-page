@@ -1,12 +1,12 @@
 import IValidator from "./interfaces/IValidator";
 
-const defaultErrorMsg = "Please enter a valid email address";
+export const DEFAULT_ERR_MSG = "Please enter a valid email address";
 const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 class EmailValidator implements IValidator {
 	private regex: RegExp;
 
-	constructor(private errorMsg = defaultErrorMsg) {
+	constructor(private errorMsg = DEFAULT_ERR_MSG) {
 		this.regex = regex;
 	}
 

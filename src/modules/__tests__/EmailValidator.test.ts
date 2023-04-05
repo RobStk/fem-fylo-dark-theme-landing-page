@@ -1,7 +1,7 @@
-import EmailValidator from "../EmailValidator";
+import EmailValidator, { DEFAULT_ERR_MSG } from "../EmailValidator";
 
 describe("validate", () => {
-	const errorMsg = "Please enter a valid email address";
+	const errorMsg = DEFAULT_ERR_MSG;
 	const emailValidator = new EmailValidator();
 
 	test("should return error msg if email is invalid", () => {
