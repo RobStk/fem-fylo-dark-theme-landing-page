@@ -23,17 +23,6 @@ describe("validate", () => {
 
 		expect(validation).toBeTruthy();
 	});
-	
-	test("should return false if required input value is empty", () => {
-		input.required = true;
-		input.value = "";
-		fakeInputValidator.validate = jest.fn().mockReturnValue([]);
-		const typeableInput = new TypeableInput(inputContainer, fakeInputValidator);
-
-		const validation = typeableInput.validate();
-
-		expect(validation).toBeFalsy();
-	});
 
 	test("should return true if not-required input value is empty", () => {
 		input.required = false;
@@ -52,6 +41,17 @@ describe("validate", () => {
 		fakeInputValidator.validate = jest.fn().mockReturnValue([]);
 		const typeableInput = new TypeableInput(inputContainer, fakeInputValidator);
 		
+		typeableInput.validate();
+
+		expect(fakeInputValidator.validate).toBeCalledTimes(1);
+	});
+
+	test("should use input validator if required input value is empty", () => {
+		input.required = true;
+		input.value = "";
+		fakeInputValidator.validate = jest.fn().mockReturnValue([]);
+		const typeableInput = new TypeableInput(inputContainer, fakeInputValidator);
+
 		typeableInput.validate();
 
 		expect(fakeInputValidator.validate).toBeCalledTimes(1);
@@ -120,24 +120,24 @@ describe("validate", () => {
 	});
 
 	test("should add first error msg to container if input validator returns errors", () => {
-		inputContainer.dataset.dataError = "";
+		inputContainer.dataset.error = "";
 		input.required = true;
 		fakeInputValidator.validate = jest.fn().mockReturnValue(["first error", "second error"]);
 		const typeableInput = new TypeableInput(inputContainer, fakeInputValidator);
 
 		typeableInput.validate();
 
-		expect(inputContainer.dataset.dataError).toBe("first error");
+		expect(inputContainer.dataset.error).toBe("first error");
 	});
 
 	test("should remove error msg from container if input validator returns no errors", () => {
-		inputContainer.dataset.dataError = "error";
+		inputContainer.dataset.error = "error";
 		input.required = true;
 		fakeInputValidator.validate = jest.fn().mockReturnValue([]);
 		const typeableInput = new TypeableInput(inputContainer, fakeInputValidator);
 
 		typeableInput.validate();
 
-		expect(inputContainer.dataset.dataError).toBe("");
+		expect(inputContainer.dataset.error).toBe("");
 	});
 });
