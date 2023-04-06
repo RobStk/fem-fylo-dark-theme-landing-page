@@ -11,9 +11,8 @@ class TypeableInput implements ITypeableInput {
 	}
 
 	validate(): boolean {
-		const inputElement = this.containerElement.querySelector("input");
+		const inputElement = this.containerElement.querySelector("input") as HTMLInputElement || null;
 		if (!inputElement) return true;
-		if (inputElement.required && !inputElement.value) return false;
 		if (!inputElement.required && !inputElement.value) return true;
 		const errors = this.inputValidator.validate(inputElement);
 		const isValid = !errors.length;
@@ -23,12 +22,12 @@ class TypeableInput implements ITypeableInput {
 
 	private setErrorState(errorMsg: string) {
 		this.containerElement.classList.add("invalid");
-		this.containerElement.dataset.dataError = errorMsg;
+		this.containerElement.dataset.error = errorMsg;
 	}
 
 	private unsetErrorState() {
 		this.containerElement.classList.remove("invalid");
-		this.containerElement.dataset.dataError = "";
+		this.containerElement.dataset.error = "";
 	}
 }
 
