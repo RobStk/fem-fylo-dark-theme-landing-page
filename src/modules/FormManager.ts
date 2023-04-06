@@ -3,9 +3,12 @@ import ITypeableInputFactory from "./interfaces/ITypeableInputFactory";
 
 export const SUCCESS_MSG = "Validation successful";
 export const FAIL_MSG = "Validation failed";
+export const FORM_ERROR_MSG = "Invalid form type";
 
 class FormManager {
 	constructor(private form: HTMLFormElement, private inputFactory: ITypeableInputFactory, private inputValidator: IInputValidator) {
+		if(!(form instanceof HTMLFormElement)) throw new Error(FORM_ERROR_MSG);
+		
 		this.form.addEventListener("submit", (event) => this.handleSubmit(event));
 	}
 
