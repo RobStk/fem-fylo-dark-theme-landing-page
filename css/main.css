@@ -24,6 +24,7 @@
   z-index: 1;
 }
 .button-container > * {
+  outline: none;
   background: none;
   border: none;
   border-radius: inherit;
@@ -48,6 +49,11 @@
   z-index: -1;
   transition: opacity 0.2s;
 }
+.button-container:focus-within {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-offset: 2px;
+}
 
 .contact {
   display: grid;
@@ -64,7 +70,6 @@
   display: flex;
   color: hsl(176, 68%, 64%);
   text-decoration: none;
-  line-height: 1.24em;
   border-bottom: 1px solid;
   padding-bottom: 0.3em;
   transition: color 0.2s;
