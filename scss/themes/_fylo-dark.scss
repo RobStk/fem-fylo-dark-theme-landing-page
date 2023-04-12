@@ -32,7 +32,7 @@
 		@include screen.respond-to("medium") {
 			height: 52vh;
 			background-color: var(--color-bg-secondary);
-			background-image: url("../../images/bg-curvy-mobile.svg");
+			background-image: url("./../images/bg-curvy-mobile.svg");
 			background-position: bottom;
 			background-size: 100%;
 			background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 
 		@include screen.respond-to("large") {
 			height: 155vh;
-			background-image: url("../../images/bg-curvy-desktop.svg");
+			background-image: url("./../images/bg-curvy-desktop.svg");
 		}
 	}
 }

@@ -497,7 +497,7 @@ button {
   padding-top: 1.4em;
   padding-right: 2em;
   padding-left: 2em;
-  background-image: url("/images/bg-quotes.png");
+  background-image: url("./../images/bg-quotes.png");
   background-repeat: no-repeat;
   background-origin: padding-box;
   background-size: 1.5em;
@@ -602,7 +602,7 @@ button {
   .fylo-dark::after {
     height: 52vh;
     background-color: var(--color-bg-secondary);
-    background-image: url("../../images/bg-curvy-mobile.svg");
+    background-image: url("./../images/bg-curvy-mobile.svg");
     background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -611,6 +611,6 @@ button {
 @media (min-width: 1440px) {
   .fylo-dark::after {
     height: 155vh;
-    background-image: url("../../images/bg-curvy-desktop.svg");
+    background-image: url("./../images/bg-curvy-desktop.svg");
   }
 }/*# sourceMappingURL=main.css.map */
